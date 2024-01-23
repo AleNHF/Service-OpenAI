@@ -63,6 +63,7 @@ export class ChatGptAiService {
     async getModelAnswerCode(Answer: GetAiModelAnswerCode) {
         try {
             console.log('Request language', Answer.target_language)
+            console.log('Request diagram', Answer.xml_diagram)
             const params: CreateCompletionRequest = {
                 prompt: `Genera un codigo ${Answer.target_language} orientado a objetos a partir del siguiente diagrama en XML: ${Answer.xml_diagram}`,
                 model: DEFAULT_MODEL_ID,
