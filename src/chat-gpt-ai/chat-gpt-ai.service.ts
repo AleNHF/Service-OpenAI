@@ -72,6 +72,7 @@ export class ChatGptAiService {
  
             const response = await this.openAiApi.createCompletion(params)
             const { data } = response
+            console.log('Response', response)
 
             if (data.choices.length) {
                 return data.choices
